@@ -117,3 +117,18 @@ const obj = {...obj1, ...obj2};
 function greatFriends(...students: string[]) { // do something }
 greatFriends('Bablu', 'Hablu', 'Gablu', 'Dablu', 'Oblu');
 ```
+- Destructuring
+    - Object destructuring
+    - Array destructuring
+    - Object destructuring don't support type assign during destructuring
+```ts
+// Object destructuring
+const {
+    contatNo, // normal destructuring
+    // address: string, // ❌
+    name: { lastName } // multi level destructuring
+} = user;
+// Array destructuring
+const myContact = ['Rahab', 'Nafis', 'Saraf', 'Jotya', 'Avro'];
+const [m, , ...rest] = myContact;
+```
