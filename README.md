@@ -98,3 +98,10 @@ const userData = {
 const numberArr: number[] = [5, 7, 15];
 const newArr: number[] = numberArr.map((elem: number): number => elem * elem); // map() method receiving a number and returning a number
 ```
+- Spread (...) operator
+    - Spread an object or array
+```ts
+const arr1: string[] = ['a', 'b', 'c'];
+const arr2: string[] = ['d', 'e'];
+const newArr: string[] = [...arr1, ...arr2]; /// ['a', 'b', 'c', 'd', 'e']
+```
