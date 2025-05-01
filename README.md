@@ -15,4 +15,14 @@ let friends : string[] = ['Ashiq', 'Bablu', 'Hablu']; // string type array
 let eligibleIds : number[] = [2411, 6457, 8790]; // number type array
 let coordinates : [number, number] = [23.27, 39.19]; // Tuple with same typs of data
 let user : [string, number, boolean] = ['Nure Alom', 26, true]; // Tuple with different types of data
+// Object
+const user: {
+    firstName: string;
+    middleName: string;
+    lastName: string;
+} = {
+    firstName: 'Md',
+    middleName: 'Nure',
+    lastName: 'Alom',
+}
 ```
