@@ -99,9 +99,21 @@ const numberArr: number[] = [5, 7, 15];
 const newArr: number[] = numberArr.map((elem: number): number => elem * elem); // map() method receiving a number and returning a number
 ```
 - Spread (...) operator
-    - Spread an object or array
+    - Spread on object or array
 ```ts
+// Spread operator in Array
 const arr1: string[] = ['a', 'b', 'c'];
 const arr2: string[] = ['d', 'e'];
 const newArr: string[] = [...arr1, ...arr2]; /// ['a', 'b', 'c', 'd', 'e']
+// Spread operator in Object
+const obj1 : {name: string; age: number} = {name: 'Nur', age: 26};
+const obj2 : {isStudent: boolean; isEnrolled: boolean;} = {isStudent: true, isEnrolled: false};
+const obj = {...obj1, ...obj2};
+```
+- Rest (...) operator
+    - Rest on array
+```ts
+// Rest in Array
+function greatFriends(...students: string[]) { // do something }
+greatFriends('Bablu', 'Hablu', 'Gablu', 'Dablu', 'Oblu');
 ```

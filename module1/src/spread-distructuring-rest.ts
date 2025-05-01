@@ -23,6 +23,13 @@
         ...mentors1,
         ...mentors2
     };
-    const { js, next } = mentorList;
-    console.log(js, next);
+
+    /* Rest Operator */
+    // function greatFriends(student1: string, student2: string, student3: string) { // ❌
+    //     console.log(`Hi ${students[0]} ${students[1]} ${students[2]} ${students[3]} ${students[4]}`);
+    // }
+    function greatFriends(...students: string[]) { // ✅
+        console.log(`Hi ${students.map((student: string) => student).join(" ")}`);
+    }
+    greatFriends('Bablu', 'Hablu', 'Gablu', 'Dablu', 'Oblu');
 }
