@@ -179,3 +179,20 @@ type TUser = {
     bloodGroup: TPositiveBloodGroups | TNegativeBloodGroups | null;
 }
 ```
+- Intersection --> Must fill all types
+```ts
+type TFrontendDeveloper = {
+    skills: string[];
+    designation1: 'Frontend Developer';
+}
+type TBackendDeveloper = {
+    skills: string[];
+    designation2: 'Backend Developer';
+}
+type TFullstackDeveloper = TFrontendDeveloper | TBackendDeveloper;
+const developer1: TFullstackDeveloper = {
+    skills: ['HTML', 'CSS', 'Express'],
+    designation1: 'Frontend Developer',
+    designation2: 'Backend Developer',
+}
+```
