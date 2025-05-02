@@ -1,7 +1,7 @@
 # Typescript Technocrad 01
 
 ## Basic Data Types in TS
-- Primitive types: string, number, boolean, undefined, null
+### Primitive types: string, number, boolean, undefined, null
 ```ts
 let firstName : string = 'Nure Alom'; // string
 let age : number = 26; // number
@@ -9,7 +9,7 @@ let isAdmin = true; // boolean
 let x : undefined = undefined; // undefined
 let z : null = null; // null
 ```
-- Non-primitive types: array, tuple, object
+### Non-primitive types: array, tuple, object
 ```ts
 let friends : string[] = ['Ashiq', 'Bablu', 'Hablu']; // string type array
 let eligibleIds : number[] = [2411, 6457, 8790]; // number type array
@@ -26,7 +26,7 @@ const user: {
     lastName: 'Alom',
 }
 ```
-- Optional Type
+### Optional Type
 ```ts
 const user1 : {
     firstName: string;
@@ -39,7 +39,7 @@ const user1 : {
     isMarried: false,
 }
 ```
-- Literal Type
+### Literal Type
 ```ts
 const user2 : {
     name: string;
@@ -51,7 +51,7 @@ const user2 : {
     age: 26,
 }
 ```
-- Access Modifier
+### Access Modifier
 ```ts
 const user3 : {
     course: 'Level 2 Web Dev';
@@ -62,11 +62,11 @@ const user3 : {
 }
 // user3.userId = 'WEB5-5500'; // ❌
 ```
-- Functions in TS
-    - Normal Function
-    - Arrow Function
-    - Method (Funciton in an object as property)
-    - Array Method (map(), forEach(), filter(), find(), some(), all())
+### Functions in TS
+- Normal Function
+- Arrow Function
+- Method (Funciton in an object as property)
+- Array Method (map(), forEach(), filter(), find(), some(), all())
 ```ts
 // Normal Function
 function add(num1: number, num2: number): number {
@@ -98,8 +98,8 @@ const userData = {
 const numberArr: number[] = [5, 7, 15];
 const newArr: number[] = numberArr.map((elem: number): number => elem * elem); // map() method receiving a number and returning a number
 ```
-- Spread (...) operator
-    - Spread on object or array
+### Spread (...) operator
+- Spread on object or array
 ```ts
 // Spread operator in Array
 const arr1: string[] = ['a', 'b', 'c'];
@@ -110,17 +110,17 @@ const obj1 : {name: string; age: number} = {name: 'Nur', age: 26};
 const obj2 : {isStudent: boolean; isEnrolled: boolean;} = {isStudent: true, isEnrolled: false};
 const obj = {...obj1, ...obj2};
 ```
-- Rest (...) operator
-    - Rest on array
+### Rest (...) operator
+- Rest on array
 ```ts
 // Rest in Array
 function greatFriends(...students: string[]) { // do something }
 greatFriends('Bablu', 'Hablu', 'Gablu', 'Dablu', 'Oblu');
 ```
-- Destructuring
-    - Object destructuring
-    - Array destructuring
-    - Object destructuring don't support type assign during destructuring
+### Destructuring
+- Object destructuring
+- Array destructuring
+- Object destructuring don't support type assign during destructuring
 ```ts
 // Object destructuring
 const {
@@ -132,9 +132,9 @@ const {
 const myContact = ['Rahab', 'Nafis', 'Saraf', 'Jotya', 'Avro'];
 const [m, , ...rest] = myContact;
 ```
-- Alias
-    - Name Alias
-    - Type Alias
+### Alias
+- Name Alias
+- Type Alias
 ```ts
     // Name Alias --> store a value in a different variable than property name during destructuring
     const {fullName: name, rollNumber: roll} = user;
@@ -167,4 +167,15 @@ const [m, , ...rest] = myContact;
     // Type Alias for Function
     type TAdd = (num1: number, num2: number) => number;
     const add: TAdd = (num1, num2) => num1 + num2;
+```
+### Union and Intersection in TS
+- Union --> Any of the following types are acceptable
+```ts
+type TPositiveBloodGroups = "A+" | "B+" | "AB+" | "O+";
+type TNegativeBloodGroups = "A-" | "B-" | "AB-" | "O-";
+type TUser = {
+    name: string;
+    gender: "male" | "female" | null;
+    bloodGroup: TPositiveBloodGroups | TNegativeBloodGroups | null;
+}
 ```
