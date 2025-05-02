@@ -132,3 +132,39 @@ const {
 const myContact = ['Rahab', 'Nafis', 'Saraf', 'Jotya', 'Avro'];
 const [m, , ...rest] = myContact;
 ```
+- Alias
+    - Name Alias
+    - Type Alias
+```ts
+    // Name Alias --> store a value in a different variable than property name during destructuring
+    const {fullName: name, rollNumber: roll} = user;
+    // Type Alias → Declare a structure as type and use that as variable type during variable declaration
+    // Object
+    type TStudent = {
+        name: string;
+        age: number;
+        isMale: boolean;
+        contactNo?: string;
+        address: string;
+    }
+    const student1: TStudent = {
+        name: 'Nur',
+        age: 62,
+        isMale: true,
+        contactNo: "+982342345234",
+        address: "Ghorer Kona",
+    }
+
+    // Primitive Type Alias
+    type TAddress = string;
+    type TUserId = number;
+    type TIsAdmin = boolean;
+
+    const isAdmin: TIsAdmin = false;
+    const address: TAddress = "Nodir Dhare";
+    const userId: TUserId = 4240;
+
+    // Type Alias for Function
+    type TAdd = (num1: number, num2: number) => number;
+    const add: TAdd = (num1, num2) => num1 + num2;
+```

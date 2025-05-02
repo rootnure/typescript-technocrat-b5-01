@@ -49,7 +49,7 @@
 
     const {
         contatNo, // normal destructuring
-        address: string,
+        // address: string, // ❌
         name: { lastName } // multi level destructuring
     } = user;
 
