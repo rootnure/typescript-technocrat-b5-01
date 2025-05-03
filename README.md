@@ -196,3 +196,31 @@ const developer1: TFullstackDeveloper = {
     designation2: 'Backend Developer',
 }
 ```
+### Different Names of ? (Question Marks) in TS
+- Ternary Operator: Short-cut of if-else conditions
+    - condition ? if_true : if_false
+```ts
+const age: number = 12;
+age >= 18 ? console.log("adult") : console.log("not adult");
+```
+- Nullish Coalescing: null / undefined --> Decision Making
+    - condition ?? decision
+```ts
+const userRole: string | null | undefined = null;
+const userType: string = userRole ?? "Guest";
+console.log(userType);
+```
+- Optional Chaining: Stop object chaining if property not found or undefined to avoid error
+    - variable?.property?.innerProperty
+```ts
+const user1: TUser = {
+    name: 'Nur',
+    address: {
+        city: 'Dhaka',
+        postalCode: 1000,
+        presentAddress: 'Dhaka, Bangladesh',
+    }
+}
+const permanentAddress = user1?.address?.permanentAddress ?? 'No permanent address found';
+console.log(permanentAddress);
+```
