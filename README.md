@@ -224,3 +224,20 @@ const user1: TUser = {
 const permanentAddress = user1?.address?.permanentAddress ?? 'No permanent address found';
 console.log(permanentAddress);
 ```
+### More Types in TS
+- Nullable type --> When a value is null then it it nullable types
+```ts
+const userToken: string | null = null;
+console.log(userToken);
+```
+- Unknown type --> When type is not known before runtime then unknown type is used
+```ts
+const getRole = (token: unknown) => token ? 'user' : 'guest';
+// token can be string, null, undefined or esle type
+```
+- Never type --> When a funciton return nothing but error then the return type is never
+```ts
+const throwError = (msg: string): never => {
+    throw new Error(msg);
+}
+```
